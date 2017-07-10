@@ -1,7 +1,7 @@
 ## GP Social Share
 
 This plugin is built to add social sharing icons at the bottom of post content.
-It makes use of the generate_after_content hook and then echoes out the content, styles and scripts if is_singular.
+It makes use of the generate_after_content hook and then echoes out the content, styles and scripts if is_single.
 
 ## Add More Links
 

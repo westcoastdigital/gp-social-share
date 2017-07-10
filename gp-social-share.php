@@ -86,7 +86,7 @@ if ( 'GeneratePress' == $theme->name || 'GeneratePress' == $theme->parent_theme 
 		function workpower_add_social_icons() {
 
 			// Check to ensure we are on a single post
-			if ( is_singular() ) {
+			if ( is_single() ) {
 
 				// Enqueue FontAwesome now we are in the hook
 				wp_enqueue_style( 'font-awesome' );
@@ -112,7 +112,7 @@ if ( 'GeneratePress' == $theme->name || 'GeneratePress' == $theme->parent_theme 
 		function workpower_add_social_scripts() {
 
 			// Check to ensure we are on a single post
-			if ( is_singular() ) {
+			if ( is_single() ) {
 
 				?>
 				<script>
