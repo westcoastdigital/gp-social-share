@@ -1,0 +1,92 @@
+#gp-social-share {
+	
+	margin: 10px 0 0 0;
+	list-style: none;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	
+}
+
+#gp-social-share li {
+
+	margin-right: 10px;
+	
+}
+
+#gp-social-share li:last-child {
+	
+	margin-right: 0;
+	
+}
+
+#gp-social-share a {
+	
+	display: block;
+	background: #999999;
+	color: #efefef;
+	border-radius: 15px;
+	text-decoration: none;
+	line-height: 30px;
+	width: 30px;  
+	font-size: 18px;
+	text-align: center;
+	
+}
+
+#gp-social-share a:hover:after{
+	
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    bottom: -110%;
+    color: #fff;
+    content: attr(title);
+    left: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 98;
+    width: 220px;
+	font-size: 12px;
+	
+}
+
+#gp-social-share a.fb-share:hover {
+	
+	background: #3b5998;
+	
+}
+
+#gp-social-share a.tw-share:hover {
+	
+	background: #00acee;
+	
+}
+
+#gp-social-share a.li-share:hover {
+	
+	background: #0077b5;
+	
+}
+
+#gp-social-share a.pt-share:hover {
+	
+	background: #c92228;
+	
+}
+
+#gp-social-share a.gp-share:hover {
+	
+	background: #dd4b39;
+	
+}
+
+#gp-social-share a.em-share:hover {
+	
+	background: #f1f1d4;
+	
+}
