@@ -91,7 +91,11 @@ if ( 'GeneratePress' == $theme->name || 'GeneratePress' == $theme->parent_theme 
 			if ( is_single() ) {
 
 				// Enqueue FontAwesome now we are in the hook
-				wp_enqueue_style( 'font-awesome' );
+				if( !wp_style_is( 'fontawesome', 'enqueued' ) ) {
+					
+					wp_enqueue_style( 'fontawesome' );
+					
+				}
 
 				// Enqueue base style now we are in the hook
 				wp_enqueue_style( 'social-share-css' );
