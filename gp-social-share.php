@@ -29,6 +29,8 @@ if ( 'GeneratePress' == $theme->name || 'GeneratePress' == $theme->parent_theme 
 			}
 
 			wp_register_style( 'social-share-css', plugins_url( '/css/gp-social-share.css', __FILE__ ), array(), 'all' );
+			
+			wp_register_script( 'social-share-js', plugin_dir_url( __FILE__ ) . 'js/gp-social-share.js', array('jquery'), '1.0' );
 
 		}
 		add_action( 'wp_enqueue_scripts', 'workpower_register_styles_scripts' );
@@ -58,7 +60,7 @@ if ( 'GeneratePress' == $theme->name || 'GeneratePress' == $theme->parent_theme 
 
 			$list = '<ul id="gp-social-share">';
 
-			// Users can now add additional icons as they require them (example at bottom of file)
+			// Users can now add additional icons as they require them (example in readme.md)
 			if( has_filter('add_social_icons') ) {
 
 				$social_links = apply_filters( 'add_social_icons', $social_links );
@@ -95,7 +97,7 @@ if ( 'GeneratePress' == $theme->name || 'GeneratePress' == $theme->parent_theme 
 				wp_enqueue_style( 'social-share-css' );
 
 				// Enqueue base script now we are in the hook
-			//	wp_enqueue_script( 'social-share-js' );
+				wp_enqueue_script( 'social-share-js' );
 
 				// Echo out the social icons
 				echo workpower_social_share_filter();
@@ -107,67 +109,4 @@ if ( 'GeneratePress' == $theme->name || 'GeneratePress' == $theme->parent_theme 
 
 	} // workpower_add_social_icons
 
-	if( !function_exists( 'workpower_add_social_scripts ') ) {
-
-		function workpower_add_social_scripts() {
-
-			// Check to ensure we are on a single post
-			if ( is_single() ) {
-
-				?>
-				<script>
-					;(function($){
-
-					  $.fn.customerPopup = function (e, intWidth, intHeight, blnResize) {
-
-						// Prevent default anchor event
-						e.preventDefault();
-
-						// Set values for window
-						intWidth = intWidth || '500';
-						intHeight = intHeight || '400';
-						strResize = (blnResize ? 'yes' : 'no');
-
-						// Set title and open popup with focus on it
-						var strTitle = ((typeof this.attr('title') !== 'undefined') ? this.attr('title') : 'Social Share'),
-							strParam = 'width=' + intWidth + ',height=' + intHeight + ',resizable=' + strResize,            
-							objWindow = window.open(this.attr('href'), strTitle, strParam).focus();
-					  }
-
-					  $(document).ready(function ($) {
-						$('#gp-social-share a').on("click", function(e) {
-						  $(this).customerPopup(e);
-						});
-					  });
-
-					}(jQuery));
-				</script>
-				<?php
-
-			}
-
-		}
-		add_action( 'wp_head', 'workpower_add_social_scripts' );
-
-	}// workpower_add_social_scripts
-
 }
-
-/*
-Example function to add additional social icons
-
-function add_extra_icons($social_links) {
- 
-	$extra_icons = array(
-		'<a href=""><i class="fa fa-instagram"></i></a>',
-		'<a href=""><i class="fa fa-snapchat"></i></a>',
-	);
- 
-	// combine the two arrays
-	$social_links = array_merge($extra_icons, $social_links);
- 
-	return $social_links;
-}
-add_filter('add_social_icons', 'add_extra_icons');
-
-*/
