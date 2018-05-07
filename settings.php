@@ -78,7 +78,8 @@ function gp_social_facebook_render(  ) {
 	$options = get_option( 'wcd_social_share_options' );
 	?>
 	<textarea cols='40' rows='5' name='wcd_social_share_options[gp_social_facebook]'><?php echo $options['gp_social_facebook']; ?></textarea>
-	<?php
+    <p><?php echo $options['gp_social_facebook']; ?></p>
+    <?php
 
 }
 
@@ -88,7 +89,8 @@ function gp_social_twitter_render(  ) {
 	$options = get_option( 'wcd_social_share_options' );
 	?>
 	<textarea cols='40' rows='5' name='wcd_social_share_options[gp_social_twitter]'><?php echo $options['gp_social_twitter']; ?></textarea>
-	<?php
+    <p><?php echo $options['gp_social_twitter']; ?></p>
+    <?php
 
 }
 
@@ -98,7 +100,8 @@ function gp_social_linkedin_render(  ) {
 	$options = get_option( 'wcd_social_share_options' );
 	?>
 	<textarea cols='40' rows='5' name='wcd_social_share_options[gp_social_linkedin]'><?php echo $options['gp_social_linkedin']; ?></textarea>
-	<?php
+    <p><?php echo $options['gp_social_linkedin']; ?></p>
+    <?php
 
 }
 
@@ -108,7 +111,8 @@ function gp_social_google_render(  ) {
 	$options = get_option( 'wcd_social_share_options' );
 	?>
 	<textarea cols='40' rows='5' name='wcd_social_share_options[gp_social_google]'><?php echo $options['gp_social_google']; ?></textarea>
-	<?php
+    <p><?php echo $options['gp_social_google']; ?></p>
+    <?php
 
 }
 
@@ -118,7 +122,8 @@ function gp_social_pinterest_render(  ) {
 	$options = get_option( 'wcd_social_share_options' );
 	?>
 	<textarea cols='40' rows='5' name='wcd_social_share_options[gp_social_pinterest]'><?php echo $options['gp_social_pinterest']; ?></textarea>
-	<?php
+    <p><?php echo $options['gp_social_pinterest']; ?></p>
+    <?php
 
 }
 
@@ -128,7 +133,8 @@ function gp_social_email_render(  ) {
 	$options = get_option( 'wcd_social_share_options' );
 	?>
 	<textarea cols='40' rows='5' name='wcd_social_share_options[gp_social_email]'><?php echo $options['gp_social_email']; ?></textarea>
-	<?php
+	<p><?php echo $options['gp_social_email']; ?></p>
+    <?php
 
 }
 
