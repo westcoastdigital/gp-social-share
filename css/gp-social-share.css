@@ -24,69 +24,44 @@
 	
 }
 
-#gp-social-share a {
+#gp-social-share a svg {
+
+	fill: #999999;
+
+}
+
+#gp-social-share a.fb-share:hover svg {
 	
-	display: block;
-	background: #999999;
-	color: #efefef;
-	border-radius: 15px;
-	text-decoration: none;
-	line-height: 30px;
-	width: 30px;  
-	font-size: 18px;
-	text-align: center;
+	fill: #3b5998;
 	
 }
 
-#gp-social-share a:hover:after{
+#gp-social-share a.tw-share:hover svg {
 	
-    background: #333;
-    background: rgba(0,0,0,.8);
-    border-radius: 5px;
-    bottom: -110%;
-    color: #fff;
-    content: attr(title);
-    left: 0;
-    padding: 0;
-    position: absolute;
-    z-index: 98;
-    width: 220px;
-	font-size: 12px;
+	fill: #00acee;
 	
 }
 
-#gp-social-share a.fb-share:hover {
+#gp-social-share a.li-share:hover svg {
 	
-	background: #3b5998;
-	
-}
-
-#gp-social-share a.tw-share:hover {
-	
-	background: #00acee;
+	fill: #0077b5;
 	
 }
 
-#gp-social-share a.li-share:hover {
+#gp-social-share a.pt-share:hover svg {
 	
-	background: #0077b5;
-	
-}
-
-#gp-social-share a.pt-share:hover {
-	
-	background: #c92228;
+	fill: #c92228;
 	
 }
 
-#gp-social-share a.gp-share:hover {
+#gp-social-share a.gp-share:hover svg {
 	
-	background: #dd4b39;
+	fill: #dd4b39;
 	
 }
 
-#gp-social-share a.em-share:hover {
+#gp-social-share a.em-share:hover svg {
 	
-	background: #f1f1d4;
+	fill: #f1f1d4;
 	
 }
