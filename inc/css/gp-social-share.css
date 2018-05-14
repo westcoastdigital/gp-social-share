@@ -65,3 +65,9 @@
 	fill: #f1f1d4;
 	
 }
+
+#gp-social-share a.wa-share:hover svg {
+	
+	fill: #075e54;
+	
+}

@@ -65,13 +65,6 @@ No. This plugin does not use any API's or receive any data from the shared conte
 
 == Upgrade Notice ==
 
-= 1.0.1 =
-Wrapped functions in class for conflict support
-Updated readme
-Added WhatsApp support
-Added hook option to display icons
-Converted jQuery to vanilla JS
-
 = 1.0 =
 This version allows you to paste in your own SVG icon code
 
