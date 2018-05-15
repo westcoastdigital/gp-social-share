@@ -55,18 +55,31 @@ No. This plugin works with the theme and does not require the premium plugin.
 
 No. This plugin does not use any API's or receive any data from the shared content. It is intentionally built to be light weight.
 
+= Can I change the email body? =
+
+Yes. Just add a function called gp_social_email_body which returns your body content.
+
+= Can I use the media uploader to upload SVG icons? =
+
+No. WordPress has SVG disabled by default due to potential security issues, the decision was made to support this and stick to inline SVG code.
+
 == Changelog ==
 
-= 1.0 =
-* Custom SVG Suport
+= 1.0.2 =
+Added support for custom email body
 
-= 0.5 =
-* Initial Build
-
-== Upgrade Notice ==
+= 1.0.1 =
+Wrapped functions in class for conflict support
+Updated readme
+Added WhatsApp support
+Added hook option to display icons
+Converted jQuery to vanilla JS
 
 = 1.0 =
 This version allows you to paste in your own SVG icon code
+
+= 0.5 =
+* Initial Build
 
 == Customisations ==
 

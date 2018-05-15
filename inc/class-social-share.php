@@ -14,6 +14,7 @@ if ( !class_exists( 'wcdgpSocialShare' ) ) {
             $thumbnail = get_the_post_thumbnail_url( 'full' );
             $options = get_option( 'social_share_options' );
             $facebook = $options['gp_social_facebook'];
+            $author = get_the_author();
             if( $facebook ) {
                 $facebook_icon = $facebook;
             } else {
@@ -55,6 +56,14 @@ if ( !class_exists( 'wcdgpSocialShare' ) ) {
             } else {
                 $email_icon = wcdgpSocialShare::default_email();
             }
+            
+            if ( !function_exists( 'gp_social_email_body' ) ) {
+                $email_body = __('Check out this awesome article by', 'gp-social');
+                $email_body .= ' ' . $author . '. ';
+                $email_body .= $url;
+            } else {
+                $email_body = gp_social_email_body();
+            }
 
             $social_links = array(
 
@@ -64,7 +73,7 @@ if ( !class_exists( 'wcdgpSocialShare' ) ) {
                 '<a href="https://plus.google.com/share?url=' . $url . '" class="gp-share" title="' . __( 'Share this post!', 'gp-social' ) . '">' . $google_icon . '</a>',
                 '<a href="https://pinterest.com/pin/create/bookmarklet/?media=' . $thumbnail . '&url=' . $url . '&description=' . $title . '" class="pt-share" title="' . __( 'Pin this post!', 'gp-social' ) . '">' . $pinterest_icon . '</a>',
                 '<a href="whatsapp://send?text=' . $url . '" class="wa-share" data-action="share/whatsapp/share" title="' . __( 'Share this post!', 'gp-social' ) . '">' . $whatsapp_icon . '</a>',
-                '<a href="mailto:?Subject=' . urlencode( $title ) . '" target="_top" class="em-share" title="' . __( 'Email this post!', 'gp-social' ) . '">' . $email_icon . '</a>',
+                '<a href="mailto:?Subject=' .  $title . '&Body=' . $email_body . '" target="_top" class="em-share" title="' . __( 'Email this post!', 'gp-social' ) . '">' . $email_icon . '</a>',
 
             );
 

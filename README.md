@@ -1,4 +1,4 @@
-=== GP Social Share ===
+### GP Social Share ###
 Contributors: WestCoastDigital
 Tags: social, share, svg
 Requires at least: 4.6
@@ -10,7 +10,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Add social share icons to single posts within GeneratePress Theme
 
-== Description ==
+## Description ##
 
 This plugin hooks into the generate_after_content hook to append social share icons to the single post page by default.
 
@@ -23,7 +23,7 @@ Title = post title
 Content = the first 40 words of the content
 URL = the post permalink
 
-== Social Media Channels ==
+## Social Media Channels ##
 These are the social channels currently supported by the plugin
 * Facebook
 * Twitter
@@ -32,16 +32,16 @@ These are the social channels currently supported by the plugin
 * LinkedIn
 * Email
 
-== Installation ==
+## Installation ##
 
 Ensure GeneratePress is your current active theme
 
 
 1. Upload the plugin files to the `/wp-content/plugins/plugin-name` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
-1. Use the Appearance->GP Social Share screen to add your own SVG code for the icons and choose your hook placement
+2. Activate the plugin through the 'Plugins' screen in WordPress
+3. Use the Appearance->GP Social Share screen to add your own SVG code for the icons and choose your hook placement
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions ##
 
 = Nothing happens when I activate the plugin =
 
@@ -55,15 +55,18 @@ No. This plugin works with the theme and does not require the premium plugin.
 
 No. This plugin does not use any API's or receive any data from the shared content. It is intentionally built to be light weight.
 
-== Changelog ==
+= Can I change the email body? =
 
-= 1.0 =
-* Custom SVG Suport
+Yes. Just add a function called gp_social_email_body which returns your body content.
 
-= 0.5 =
-* Initial Build
+= Can I use the media uploader to upload SVG icons? =
 
-== Upgrade Notice ==
+No. WordPress has SVG disabled by default due to potential security issues, the decision was made to support this and stick to inline SVG code.
+
+## Changelog ##
+
+= 1.0.2 =
+Added support for custom email body
 
 = 1.0.1 =
 Wrapped functions in class for conflict support
@@ -75,20 +78,20 @@ Converted jQuery to vanilla JS
 = 1.0 =
 This version allows you to paste in your own SVG icon code
 
-== Customisations ==
+## Customisations ##
 
 If you want to find custom icons, I recommend you check out [https://iconmonstr.com](https://iconmonstr.com/)
 
 To use Iconmonstr SVG code
 1. Search for your required icon
-1. Click on the icon you like
-1. Ensure SVG is selected
-1. Agree to the license conditions
-1. Click on Embed
-1. Ensure Inline is selected
-1. Highlight the displayed SVG code
-1. Copy and paste the code into the relevant icon section
-1. Save Changes at the bottom of the page
+2. Click on the icon you like
+3. Ensure SVG is selected
+4. Agree to the license conditions
+5. Click on Embed
+6. Ensure Inline is selected
+7. Highlight the displayed SVG code
+8. Copy and paste the code into the relevant icon section
+9. Save Changes at the bottom of the page
 
 You can add more sharing using the following function and modifying it as required
 
