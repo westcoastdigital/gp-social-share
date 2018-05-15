@@ -63,6 +63,9 @@ Yes. Just add a function called gp_social_email_body which returns your body con
 
 No. WordPress has SVG disabled by default due to potential security issues, the decision was made to support this and stick to inline SVG code.
 
+== Screenshots ==
+1. Plugin settings backend
+
 == Changelog ==
 
 = 1.0.2 =
@@ -80,6 +83,14 @@ This version allows you to paste in your own SVG icon code
 
 = 0.5 =
 * Initial Build
+
+== Upgrade Notice ==
+
+= 1.0.2 =
+Upgrade in order to be able to customise your email body text
+
+= 1.0 =
+Upgrade in order to use your own SVG icon code
 
 == Customisations ==
 

@@ -48,5 +48,6 @@ if ( 'GeneratePress' == $theme->name || 'GeneratePress' == $theme->parent_theme 
 		}
 	add_action( 'admin_menu', 'wcdgpSocialShare::add_admin_menu' );
 	add_action( 'admin_init', 'wcdgpSocialShare::social_share_options_init' );
+	add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'wcdgpSocialShare::settings_link' );
 
 }

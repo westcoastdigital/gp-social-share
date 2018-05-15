@@ -401,6 +401,13 @@ if ( !class_exists( 'wcdgpSocialShare' ) ) {
 
         }// options_page
 
+        public function settings_link( $links ) {
+            $mylinks = array(
+            '<a href="' . admin_url( 'themes.php?page=_gp_social_share_-_svg' ) . '">' . __( 'Settings', 'gp-social' ) . '</a>',
+            );
+           return array_merge( $links, $mylinks );
+           }
+
     } // class wcdgpSocialShare
 }// checks class doesnt exist
 
